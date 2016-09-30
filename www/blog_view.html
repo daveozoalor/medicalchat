@@ -1,0 +1,59 @@
+  <div class="page" data-page="doctors_list">
+        
+         <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left user-name"><a href="#" class="color-white back"><i class="fa fa-chevron-left" aria-hidden="true"> </i>&nbsp; &nbsp; </a> {{url_query.categoryname}}s</div>
+                <div class="right"> </div>
+              </div>
+            </div> 
+            
+              <!-- Search Bar -->
+    <form class="searchbar">
+        <div class="searchbar-input">
+            <input type="search" placeholder="Search">
+            <a href="#" class="searchbar-clear"></a>
+        </div>
+        <a href="#" class="searchbar-cancel">Cancel</a>
+    </form>
+    
+    <!-- Search Bar overlay-->
+    <div class="searchbar-overlay"></div>
+      
+      
+              <div class="toolbar toolbar-bottom theme-gray">
+            <div class="toolbar-inner">
+                <a href="#" class="link back"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                <a href="specializations_list.html" class="link"><i class="fa fa-user-md" aria-hidden="true" ></i></a>
+                <a href="appointments_schedule_list.html" class="link"><i class="fa fa-clock-o" aria-hidden="true" ></i></a>
+                <a href="messages_log.html" class="link"><i class="fa fa-envelope" aria-hidden="true" ></i></a>
+                <a href="index.html" class="link"><i class="fa fa-home" aria-hidden="true"></i></a>
+                
+            </div>
+        </div>
+      
+          <div class="page-content">
+           <div class="content-block searchbar-not-found color-black bg-white">
+                Nothing found
+        </div>
+ 
+
+<br/>
+	<div class="card demo-card-header-pic">
+				 
+				  <div class="card-content">
+				   
+				   
+						<div class="list-block media-list inset searchbar-found doctors-list virtual-list">
+						  <ul class="doctors2-list-block list-block-search">
+						   
+						  </ul>
+						</div> 
+				   
+				  </div>
+				</div>
+			
+			 </div>
+          
+			
+        </div>

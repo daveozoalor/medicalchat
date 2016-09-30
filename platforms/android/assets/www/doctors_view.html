@@ -1,0 +1,141 @@
+ <div class="page" data-page="doctors_view">
+        
+         <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+              <div class="left"><a href="#" class="color-white back"><i class="fa fa-chevron-left" aria-hidden="true"> </i>&nbsp; &nbsp;  &nbsp;</a>&nbsp; {{url_query.fullname}}</div> 
+              <div class="right"> <a href="#" class="link change-personal-doctor"><i class="fa user-plus" aria-hidden="true"> </i> &nbsp; <!--Change doctor--></a></div>
+              </div>
+            </div> 
+    
+      <div class="toolbar toolbar-bottom theme-gray">
+				    <div class="toolbar-inner">
+				        <a href="#" class="link back"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                <a href="specializations_list.html" class="link"><i class="fa fa-user-md" aria-hidden="true" ></i></a>
+                <a href="appointments_schedule_list.html" class="link"><i class="fa fa-clock-o" aria-hidden="true" ></i></a>
+                <a href="messages_log.html" class="link"><i class="fa fa-envelope" aria-hidden="true" ></i></a>
+				        <a href="index.html" class="link"><i class="fa fa-home" aria-hidden="true"></i></a>
+				        
+				    </div>
+				</div>
+      
+          <div class="page-content">
+          
+          
+
+<br/>
+<br/>
+
+<span class="profilePictureBox">
+
+</span>
+
+
+
+
+		
+			
+		
+
+
+  <div class="card" style="width: 100%; margin-left: 0; ">
+				  <div class="card-content">
+				<div class="list-block media-list ">
+				  <ul class="contact-list">
+
+				    <li style="border: 1px solid #88868c; color: black; border-radius: 5px;">
+				      <a href="messages_view.html?id={{url_query.id}}&fullname={{url_query.fullname}}" class="item-link item-content">
+				        <div class="item-media color-red" > <i class="fa fa-commenting-o" aria-hidden="true" style="margin:2px;  font-size: 30px;"></i> </div>
+				        <div class="item-inner">
+				          <div class="item-title-row">
+				            <div class="item-title" style="font-weight: bold !important;" >Chat </div>
+				          </div>
+				          <div class="item-text">Leave a message and start a live chat</div>
+				        </div>
+				      </a>
+				    </li>
+
+				    <li style="border: 1px solid #88868c; color: black; border-radius: 5px;" class="hideThisButton">
+				      <a href="messages_call_view.html?id={{url_query.id}}&fullname={{url_query.fullname}}" class="item-link item-content">
+				        <div class="item-media color-red"> <i class="fa fa-phone" aria-hidden="true" style="font-size: 30px;"></i> </div>
+				        <div class="item-inner">
+				          <div class="item-title-row">
+				            <div class="item-title" style="font-weight: bold !important;" >Call</div>
+				          </div>
+				          <div class="item-text">Make audio and video calls</div>
+				        </div>
+				      </a>
+				    </li>
+
+				    <li style="border: 1px solid #88868c; color: black; border-radius: 5px;" id="add_personal_doctor" class="hideThisButton">
+				      <a href="#" class="item-link item-content ">
+				        <div class="item-media color-red"> <i class="fa fa-plus" aria-hidden="true" style="font-size: 30px;"></i> </div>
+				        <div class="item-inner">
+				          <div class="item-title-row">
+				            <div class="item-title" style="font-weight: bold !important;" >Make personal doctor</div>
+				          </div>
+				          <div class="item-text">This Profile will appear on your home screen</div>
+				        </div>
+				      </a>
+				    </li>
+				    
+				    
+				  </ul>
+				</div>
+				    
+				    
+				    
+				    
+				  </div>
+				</div>
+			
+
+
+
+
+
+            <div class="content-block searchbar-not-found">
+                Nothing found
+          </div>
+          
+          
+
+        
+        
+        
+		        <div class="card facebook-card color-black" style="border-color: 1px solid #7e7e7e; width: 100%; margin-left: 0;">
+				  <div class="card-header" style="font-weight: bold; background-color: #efefef;">Book an appointment
+				  </div>
+				  <div class="card-content">
+				    <div class="card-content-inner">
+				    
+				     
+                       <form id="scheduleAppointmentFormSubmit">
+                    <div class="list-block accordion-list">'
+									  <ul class="appointment-list-block">
+                                          
+									  </ul>
+							</div>
+                        </form>
+
+
+
+
+
+
+
+
+				      <p><div class="addNewAppointment">
+        	
+                      </div></p>
+                      
+				    </div>
+				  </div>
+				</div>   
+        
+        
+        
+        
+
+       </div>
+        </div>

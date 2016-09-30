@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+
+
+    <!-- <script src="js/jquery.js"></script> -->
+
+  
+ <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBg0VeSMt-xhzPi-UogfO0TBhFIUnWVs24",
+    authDomain: "doctordial.firebaseapp.com",
+    databaseURL: "https://doctordial.firebaseio.com",
+    storageBucket: "project-162854887831486239.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
+  
+    <!-- Bootstrap core CSS  -->
+    <link rel="shortcut icon" href="https://quickblox.com/favicon.ico">
+
+    <!-- use http://una.im/CSSgram/ for filters 
+    <link rel="stylesheet" href="css/bootstrap.min.css">-->
+
+
+    
+    
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: gap: 'unsafe-inline' https://ssl.gstatic.com;" />
+    <meta http-equiv="Cache-control" content="no-cache">
+    
+    <meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+   
+ 
+		<!-- FireBase -->
+    <script src="js/firebase.js"></script>
+
+    <title>Doctor Dial</title>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.material.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    
+</head>
+<body class="theme-red layout-white layout-gray-custom">
+
+  
+  <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main" >
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages" >
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="index" class="page" >
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page -->
+            <div class="navbar">
+              <div class="navbar-inner">
+                
+                <div class="left user-name"><a href="index.html" class="color-white">&nbsp;<i class="fa fa-plus-circle" aria-hidden="true"> </i></a>&nbsp;Doctordial</div>
+                <div class="right"> <a href="users_view.html" class="link button color-white"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Profile</a></div>
+              </div>
+            </div>              
+          
+
+ 
+            <!-- Bottom Toolbar. In Material theme it should be inside of the page-->
+           
+ 
+  
+			<div class="page-content" style="color: black;">
+	
+				<div class="card demo-card-header-pic">
+				  <div style=" color: black;" valign="bottom" class="card-header color-white no-border">Personal Doctor</div>
+				  <div class="card-content">
+				   
+				   
+						<div class="list-block media-list inset">
+						  <ul>
+						    <li style="color: black;">
+						      <a href="#" class="item-link item-content" onclick="viewPersonalDoc()">
+						        <div class="item-media" style="width: 20%;" > <img src="img/doctor1.jpg" style="width: 100%;"></img> </div>
+						        <div class="item-inner">
+						          <div class="item-title-row">
+						            <div class="item-title" style="font-size: 18px; font-weight: bold;"><span class="personal-doctor-name">Dr. Olakunle Smith</span></div>
+						          </div>
+						          <div class="item-subtitle"> Consultant Gynaecologist</div><br/>
+						          <div class="item-subtitle"> <i class="fa fa-map-marker" aria-hidden="true"></i> Maryland, Lagos</div>
+						        </div>
+						      </a><br/>
+						     
+						    </li>
+						  </ul>
+						</div> 
+				   
+				  </div>
+				</div>
+			
+		
+			   <div class="card">
+				  <div class="card-content">
+				<div class="list-block media-list">
+				  <ul>
+				    <li style="border: 1px solid #88868c; color: black; border-radius: 5px;">
+				      <a href="complaints_list.html" class="item-link item-content">
+				        <div class="item-media color-red"> <i class="fa fa-commenting" aria-hidden="true" style="font-size: 30px;"></i> </div>
+				        <div class="item-inner">
+				          <div class="item-title-row">
+				            <div class="item-title" style="font-weight: bold !important;" >Type Your Health Question</div>
+				          </div>
+				          <div class="item-text">Get answers from doctors within 24 hours</div>
+				        </div>
+				      </a>
+				    </li>
+				    
+				    <li style="border: 1px solid #88868c; color: black; border-radius: 5px;">
+				      <a href="specializations_list.html" class="item-link item-content">
+				        <div class="item-media color-blue"> <i class="fa fa-user-md" aria-hidden="true" style="font-size: 30px;"></i> </div>
+				        <div class="item-inner">
+				          <div class="item-title-row">
+				            <div class="item-title" style="font-weight: bold !important;" >Find A Doctor</div>
+				          </div>
+				          <div class="item-text">Consult online or book appointments</div>
+				        </div>
+				      </a>
+				    </li>
+				    
+				    <li style="border: 1px solid #88868c; color: black; border-radius: 5px;">
+				      <a href="appointments_schedule_list.html" class="item-link item-content">
+				        <div class="item-media color-indigo"> <i class="fa fa-clock-o" aria-hidden="true" style="font-size: 30px;"></i> </div>
+				        <div class="item-inner">
+				          <div class="item-title-row">
+				            <div class="item-title" style="font-weight: bold !important;" >My Appointments</div>
+				          </div>
+				          <div class="item-text">See list of pending appointments </div>
+				        </div>
+				      </a>
+				    </li>
+				      <li style="border: 1px solid #88868c; color: black; border-radius: 5px;">
+				      <a href="messages_log.html" class="item-link item-content">
+				        <div class="item-media color-deeporange"> <i class="fa fa-envelope" aria-hidden="true" style="font-size: 30px;"></i> </div>
+				        <div class="item-inner">
+				          <div class="item-title-row">
+				            <div class="item-title messageCountBadge" style="font-weight: bold !important;" >
+                       <span class="nameOfChat">Messages </span>
+                      
+                    </div>
+				          </div>
+				          <div class="item-text">Recent call and message records </div>
+				        </div>
+				      </a>
+				    </li>
+				    <!-- 
+				    <li style="border: 1px solid #88868c; color: black; border-radius: 5px;">
+				      <a href="messages_call_view.html?doctorUserID=a94ae289-ce2b-46f6-9c01-e76ab2812dd7" class="item-link item-content">
+				        <div class="item-media"> <i class="fa fa-clock-o" aria-hidden="true" style="font-size: 30px;"></i> </div>
+				        <div class="item-inner">
+				          <div class="item-title-row">
+				            <div class="item-title" style="font-weight: bold !important; color: red;" >Call doctor</div>
+				          </div>
+				          <div class="item-text"> </div>
+				        </div>
+				      </a>
+				    </li>
+				    <li style="border: 1px solid #88868c; color: black; border-radius: 5px;">
+				      <a href="messages_call_settings.html?doctorUserID=a94ae289-ce2b-46f6-9c01-e76ab2812dd7" class="item-link item-content">
+				        <div class="item-media"> <i class="fa fa-clock-o" aria-hidden="true" style="font-size: 30px;"></i> </div>
+				        <div class="item-inner">
+				          <div class="item-title-row">
+				            <div class="item-title" style="font-weight: bold !important; color: red;" >Call Settings</div>
+				          </div>
+				          <div class="item-text"> </div>
+				        </div>
+				      </a>
+				    </li> -->
+				  </ul>
+				</div>
+				    
+				    
+				    
+				    
+				    
+				    
+				 
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				    
+				  </div>
+				</div>
+			
+			
+			
+        
+			 		 </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="login-screen ">
+    <div class="view">
+      <div class="page">
+      <div class="page-content login-screen-content" style="background-color: white;">
+    <div class="login-screen-title">
+	          <img src="img/doctordial-logo.jpg" class="blink"/> 	
+    	
+    </div>
+
+     <!-- <a href="#" class="button button-fill color-blue googleLogin">Login With Google+</a> -->
+      <div class="content-block">
+    <!-- Buttons row as tabs controller -->
+    <div class="buttons-row">
+      <!-- Link to 1st tab, active -->
+      <a href="#loginTab" class="tab-link active button button-raised button-round button-fill color-green" ><i class="fa fa-key" aria-hidden="true"></i> Login</a>
+      <!-- Link to 2nd tab -->
+      <a href="#signupTab" class="tab-link button button-raised  button-round color-blue button-fill"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Signup</a>
+    </div>
+  </div>
+ 
+  
+    <div class="tabs-animated-wrap" >
+        
+        <!-- Tabs, tabs wrapper -->
+        <div class="tabs">
+  <div id="loginTab" class="tab">  
+  <div class="login-screen-title color-black">Login</div>
+  <form id="loginForm" class="list-block">
+      <div class="list-block inset">
+        <ul>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</div>
+              <div class="item-input">
+                <input type="email" name="loginemail" placeholder="Your email"/>
+              </div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><i class="fa fa-key" aria-hidden="true"></i>Password</div>
+              <div class="item-input">
+                <input type="password" name="loginpassword" placeholder="Your password"/>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="list-block">
+        <ul>
+        
+          <div class="demo-progressbar-load-hide">
+        <p style="height:2px"></p>
+        
+             <li>
+
+             <a href="#" class="button login-button button-raised button-fill  ripple-green button-big button-round color-green"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In</a>
+       
+       </li>
+      </div>
+        </ul>
+        
+        
+        	
+			
+      </div>
+    </form> 
+
+</div>
+
+
+
+  <div id="signupTab" class="tab"> 
+    <div class="login-screen-title color-black">Signup</div>
+       <form id="signupForm">
+      <div class="list-block inset">
+        <ul>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</div>
+              <div class="item-input">
+                <input type="email" name="email" placeholder="Your email"/>
+              </div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><i class="fa fa-key" aria-hidden="true"></i> Password</div>
+              <div class="item-input">
+                <input type="password" name="password" placeholder="Your password"/>
+              </div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><i class="fa fa-user" aria-hidden="true"></i> First name</div>
+              <div class="item-input">
+                <input type="text" name="firstname" placeholder="Your Firstname"/>
+              </div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><i class="fa fa-user" aria-hidden="true"></i> Middle name</div>
+              <div class="item-input">
+                <input type="text" name="middlename" placeholder="Your Middle name"/>
+              </div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><i class="fa fa-user" aria-hidden="true"></i> Last name</div>
+              <div class="item-input">
+                <input type="text" name="lastname" placeholder="Your Last name"/>
+              </div>
+            </div>
+          </li>
+         
+		    
+		    <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><i class="fa fa-female" aria-hidden="true"></i> Gender</div>
+              <div class="item-input">
+              <select name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              </select>
+              </div>
+            </div>
+		   </li>
+		    <li class="item-content">
+            <div class="item-inner">
+              <div class="item-input">
+                 <div class="demo-progressbar-load-hide">
+        <p style="height:2px"></p>
+        
+             <li>
+              <a href="#" id="signupButton" class="button list-button button-raised button-big  button-fill color-green ripple-green">
+                 <i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign Up</a>
+                 </li>
+                 </div>
+              </div>
+            </div>
+		   </li>
+        </ul>
+      </div>
+    </form>  
+  
+  </div>
+  <div id="forgotPaaswordTab" class="tab"> 
+    <div class="login-screen-title color-white">Forgot Password</div>
+     <form id="recoverForm" >
+      <div class="list-block inset">
+        <ul>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title label"><i class="fa fa-envelope-o" aria-hidden="true"></i> Email</div>
+              <div class="item-input">
+                <input type="email" name="recoveryEmail" placeholder="Your email"/>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="list-block">
+        <ul>
+          <li><a href="#" id="sendRecovery" class="button recovery-button button-raised button-fill  ripple-green">Send Recovery Email</a></li>
+        </ul>
+      </div>
+    </form> 
+  </div>
+  
+
+  </div>
+  
+ </div>
+ 
+   
+ 
+  </div>
+      </div>
+    </div>
+</div>  
+
+      
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+   
+   
+      <script type="text/javascript" src="cordova.js"></script>
+
+		
+		
+		
+
+		
+        
+</body>
+
+
+</html>

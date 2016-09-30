@@ -1,0 +1,62 @@
+
+          <div data-page="complaints_view" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center"> <i class="fa fa-heart-o" ></i> {{url_query.title}}</div>
+              </div>
+              
+   
+            </div>              
+            
+    <div class="subnavbar">
+        <div class="buttons-row">
+         <a href="#" class="link button button-fill back"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+			        <a href="#" class="link button button-fill  "><i class="fa fa-phone" aria-hidden="true"></i></a>
+			        <!-- <a href="#" class="link button button-fill  "><i class="fa fa-clock-o" aria-hidden="true"></i></a> -->
+			  	
+        </div>
+    </div> 
+    
+    
+    <!-- Top Navbar. In Material theme it should be inside of the page -->
+            <div class="navbar">
+              <div class="navbar-inner">
+                
+                <div class="left user-name"><a href="#" class="color-white back"><i class="fa fa-chevron-left" aria-hidden="true"> </i>&nbsp; &nbsp;  &nbsp;</a>&nbsp; {{url_query.title}}</div>
+                <div class="right"> </div>
+              </div>
+            </div>              
+          
+           
+    <div class="subnavbar theme-white color-black" style="border: 1px solid #8f929a">
+        <div class="buttons-row">
+             <a href="messages_list.html" class="link button color-black"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; Messages</a>
+                    <a href="users_view.html" class="link button color-black"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Profile</a>
+        </div>
+    </div> 
+ 
+            <!-- Bottom Toolbar. In Material theme it should be inside of the page-->
+           
+ 
+            <!-- Scrollable page content -->
+              <!-- messagebar -->
+				  <div class="toolbar messagebar theme-white" style="border: 1px solid #c0c2c0;">
+				    <div class="toolbar-inner">
+				      <textarea placeholder="Message" id='messageInput'></textarea>
+				      <a href="#" class="link theme-green" id="sendMessageButton" style="border: 15px; border-left: 1px solid #c0c2c0">Send</a>
+				    </div>
+				  </div>
+				  <!-- messages-content -->
+
+  
+			<div class="page-content messages-content">
+			  <div class="content-block">
+              </div>
+			
+		
+			  <div class="messages "></div>
+			  </div>
+        
+          </div>

@@ -1,0 +1,20 @@
+{
+  "name": "doctordial",
+  "version": "1.0.0",
+  "description": "Video chat software",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "video",
+    "chat",
+    "doctordial"
+  ],
+  "author": "Dave Partner Ozoalor",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^1.1.1"
+  }
+}

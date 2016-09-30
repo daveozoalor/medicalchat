@@ -1,0 +1,177 @@
+ <div class="page  navbar-fixed " data-page="users_edit">
+        
+       
+         <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left">
+                <a href="#" class="color-white back">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i> </a>&nbsp;Edit Profile</div>
+
+
+              </div>
+            </div> 
+
+
+
+          <div class="page-content">
+          
+          	<div class="card facebook-card">
+			 
+			  <div class="card-content">
+			    <div class="card-content-inner">
+			      <img id="myImage" width="100%">
+			    </div>
+			  </div>
+			  <div class="card-footer">
+			    <a href="#" class="link open-picker" data-picker=".picker-1"><i class="fa fa-camera" aria-hidden="true"></i> Upload Picture</a>
+			  </div>
+			</div>  
+
+
+           <!-- Form has additional "store-data" class to enable form storage on this form -->
+			<form id="users-edit-form" class="store-data list-block bg-white color-black "  >
+			  <ul>
+			  
+			  
+			    <li>
+			      <div class="item-content">
+			       <div class="item-media"><i class="fa fa-user" aria-hidden="true"></i></div>
+			           <div class="item-inner">
+			          <div class="item-input">
+			            <!-- Make sure that input have "name attrobute" -->
+			            <input type="text" name="firstname" placeholder="First Name">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"><i class="fa fa-user" aria-hidden="true"></i></div>
+			           <div class="item-inner">
+			          <div class="item-input">
+			            <!-- Make sure that input have "name attrobute" -->
+			            <input type="text" name="middlename" placeholder="Middle Name">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"><i class="fa fa-user" aria-hidden="true"></i></div>
+			           <div class="item-inner">
+			          <div class="item-input">
+			            <!-- Make sure that input have "name attrobute" -->
+			            <input type="text" name="lastname" placeholder="Last Name">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    
+			    
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+			           <div class="item-inner">
+			          <div class="item-input">
+			            <!-- Make sure that input have "name attrobute" -->
+			            <input type="email" name="email" placeholder="E-mail">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+			           <div class="item-inner">
+			          <div class="item-input">
+			            <!-- Make sure that input have "name attrobute" -->
+			            <input type="text" name="city" placeholder="City">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    
+			    <li>
+			      <div class="item-content">
+			       
+			          <div class="item-media"><i class="fa fa-fire" aria-hidden="true"></i></div>
+			           <div class="item-inner">
+			           <div class="item-input">
+			            <!-- Make sure that input have "name attrobute" -->
+			            <input type="text" name="bloodgroup" placeholder="Blood Group">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"><i class="fa fa-first-order" aria-hidden="true"></i></div>
+			           <div class="item-inner">
+			          <div class="item-input">
+			            <!-- Make sure that input have "name attrobute" -->
+			            <input type="text" name="bloodsugar" placeholder="Blood Sugar">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    <li>
+			      <div class="item-content">
+			        <div class="item-media"><i class="fa fa-blind" aria-hidden="true"></i></div>
+			           <div class="item-inner">
+			          <div class="item-input">
+			            <!-- Make sure that input have "name attrobute" -->
+			            <input type="text" name="allergies" placeholder="Allergies">
+			          </div>
+			        </div>
+			      </div>
+			    </li>
+			    
+			    
+			    
+			  </ul>
+
+			 <a href="#" onclick="updateUserProfileButton()" class="bg-teal button button-big button-round  button-fill user-edit-form-button"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save </a>
+
+		
+  </a>
+			</form>
+ 
+			 </div>
+			 
+
+  <!-- Picker -->
+  <div class="picker-modal picker-1">
+    <div class="toolbar  bg-teal">
+      <div class="toolbar-inner">
+        <div class="left"></div>
+        <div class="right"><a href="#" class="close-picker color-white"><i class="fa fa-check-square" aria-hidden="true"></i> <b>Done</b></a> &nbsp; &nbsp; </div>
+      </div>
+    </div>
+    <div class="picker-modal-inner">
+      <div class="content-block">
+      
+        <p class="buttons-row">
+  <a href="#" class="button button button-big button-fill color-gray" onclick="getPictureFromGallery()"><i class="fa fa-picture-o" aria-hidden="true"></i> Photo Gallery</a>
+  <a href="#" class="button button button-big button-fill color-gray" onclick="getPictureFromCamera()"><i class="fa fa-camera" aria-hidden="true"></i> Camera</a>
+       </p>
+
+<div class="progressBarDiv"> </div>
+
+      </div>
+    </div>
+  </div>
+        </div>
+        
+        
+        
+
+
+
+
+
+

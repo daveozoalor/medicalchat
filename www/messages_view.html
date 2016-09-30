@@ -1,0 +1,73 @@
+
+          <div data-page="messages_view" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                
+                <div class="left user-name">
+                </div>
+                <div class="right"> 
+
+                <a href="messages_log.html" class="color-white link" >
+                <i class="fa fa-comments-o" aria-hidden="true"> </i></a>
+
+                <a href="messages_call_view.html?id={{url_query.id}}&fullname={{url_query.fullname}}" class="color-white link" >
+                <i class="fa fa-phone" aria-hidden="true"> </i></a> </div>
+              </div>
+            </div>               
+
+
+            <!-- Bottom Toolbar. In Material theme it should be inside of the page-->
+           
+ 
+            <!-- Scrollable page content -->
+              <!-- messagebar -->
+				  <div class="toolbar messagebar theme-white" style="border: 1px solid #c0c2c0;">
+				    <div class="toolbar-inner">
+				      <textarea placeholder="Message" id='messageInput'></textarea>
+              <a href="#"  class="open-picker" data-picker=".picker-1"><i class="icon icon-camera"></i></a>
+				      <a href="#" class="link theme-green"  id="sendMessageButton" style="border: 15px; border-left: 1px solid #c0c2c0">Send</a>
+				    </div>
+				  </div>
+				  <!-- messages-content -->
+
+  
+			<div class="page-content messages-content">
+
+      
+			  <div class="content-block">
+              </div>
+			
+		
+			  <div class="messages "></div>
+			  </div>
+        
+
+
+
+
+
+  <!-- Picker -->
+  <div class="picker-modal picker-1">
+    <div class="toolbar  bg-teal">
+      <div class="toolbar-inner">
+        <div class="left"></div>
+        <div class="right"><a href="#" class="close-picker color-white"><i class="fa fa-check-square" aria-hidden="true"></i> <b>Done</b></a> &nbsp; &nbsp; </div>
+      </div>
+    </div>
+    <div class="picker-modal-inner">
+      <div class="content-block">
+      
+        <p class="buttons-row">
+  <a href="#" class="button button button-big button-fill color-gray" onclick="MessageGetPictureFromGallery()"><i class="fa fa-picture-o" aria-hidden="true"></i> Photo Gallery</a>
+  <a href="#" class="button button button-big button-fill color-gray" onclick="MessageGetPictureFromCamera()"><i class="fa fa-camera" aria-hidden="true"></i> Camera</a>
+       </p>
+
+<div class="progressBarDiv"> </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

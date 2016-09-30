@@ -1,0 +1,54 @@
+/* === Dark layout === */
+.layout-gray-custom .page,
+.layout-gray-custom .login-screen-content,
+.page.layout-gray-custom,
+.layout-gray-custom .panel,
+.panel.layout-gray-custom {
+  background-color: #dcddde;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+
+
+.facebook-card {
+margin-bottom: 0px;
+
+	}
+
+
+  
+
+  .facebook-card .card-header {
+    display: block;
+    padding: 10px;
+    color: black;
+    border-bottom: 1px solid gray;
+  }
+  .facebook-card .facebook-avatar {
+    float: left;
+  }
+  .facebook-card .facebook-name {
+    margin-left: 44px;
+    font-size: 14px;
+    font-weight: 500;
+
+  }
+  .facebook-card .facebook-date {
+    margin-left: 44px;
+    font-size: 13px;
+    color: black;
+  }
+  .facebook-card .card-footer {
+    background: #fafafa;
+  }
+  .facebook-card .card-footer a {
+    color: black;
+    font-weight: 500;
+  }
+  .facebook-card .card-content img {
+    display: block;
+  }
+  .facebook-card .card-content-inner {
+    padding: 15px 10px;
+  }  
+

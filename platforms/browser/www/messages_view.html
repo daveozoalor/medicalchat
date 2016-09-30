@@ -1,0 +1,47 @@
+
+          <div data-page="messages_view" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+              <div class="navbar-inner">
+                
+                <div class="left user-name"><a href="#" class="color-white link back"><i class="fa fa-chevron-left" aria-hidden="true"> </i></a>&nbsp; 
+                <a href="users_view.html?id={{url_query.id}}" class="color-white link">&nbsp;  {{url_query.fullname}}</a>
+                </div>
+                <div class="right"> 
+
+                <a href="messages_log.html" class="color-white link" >
+                <i class="fa fa-comments-o" aria-hidden="true"> </i></a>
+
+                <a href="messages_call_view.html?id={{url_query.id}}&fullname={{url_query.fullname}}" class="color-white link" >
+                <i class="fa fa-phone" aria-hidden="true"> </i></a> </div>
+              </div>
+            </div>               
+
+
+            <!-- Bottom Toolbar. In Material theme it should be inside of the page-->
+           
+ 
+            <!-- Scrollable page content -->
+              <!-- messagebar -->
+				  <div class="toolbar messagebar theme-white" style="border: 1px solid #c0c2c0;">
+				    <div class="toolbar-inner">
+				      <textarea placeholder="Message" id='messageInput'></textarea>
+              <a href="#" id="sendPhoto"  onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM)"><i class="icon icon-camera"></i></a>
+				      <a href="#" class="link theme-green" onkeydown="return runScript(event)" id="sendMessageButton" style="border: 15px; border-left: 1px solid #c0c2c0">Send</a>
+				    </div>
+				  </div>
+				  <!-- messages-content -->
+
+  
+			<div class="page-content messages-content">
+
+      
+			  <div class="content-block">
+              </div>
+			
+		
+			  <div class="messages "><video autoplay></video></div>
+			  </div>
+        
+          </div>

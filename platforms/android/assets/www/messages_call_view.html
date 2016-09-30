@@ -1,0 +1,52 @@
+ <div data-page="messages_call_view" class="page">
+ 
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+              <div class="navbar">
+              <div class="navbar-inner">
+                
+                <div class="left user-name"><a href="users_view.html?id={{url_query.id}}" class="color-white back"><i class="fa fa-chevron-left" aria-hidden="true"> </i>&nbsp; &nbsp;  &nbsp;</a>&nbsp; Call {{url_query.fullname}}</div>
+               
+              </div>
+            </div>              
+
+ 
+            <!-- Bottom Toolbar. In Material theme it should be inside of the page-->
+
+                 <div class="toolbar toolbar-bottom theme-gray">
+				    <div class="toolbar-inner">
+				        <a href="#" class="link back"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                <a href="specializations_list.html" class="link"><i class="fa fa-user-md" aria-hidden="true" ></i></a>
+                <a href="appointments_schedule_list.html" class="link"><i class="fa fa-clock-o" aria-hidden="true" ></i></a>
+                <a href="messages_log.html" class="link"><i class="fa fa-envelope" aria-hidden="true" ></i></a>
+				        <a href="index.html" class="link"><i class="fa fa-home" aria-hidden="true"></i></a>
+				        
+				    </div>
+				</div>
+  
+			<div class="page-content">
+		
+		<br/>
+		<br/>
+		<br/>
+		<script>
+			//get the email from localstorage and get the other receiver's email too'
+			
+			$('#callFrame').attr('src','call.html?callEmail'+localStorage.email+'')
+		</script>
+		 <iframe id="callFrame" src="call.html?" width="100%" height="640" frameborder="0"></iframe>  
+				    
+				    
+          </div><!-- /.row -->
+    </div><!-- / main -->
+
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
